@@ -50,18 +50,11 @@ public class ColorPicker : MonoBehaviour, IPointerClickHandler, IPointerEnterHan
 
         tracking = true;
         StartCoroutine(PreviewCo(data));
-     
-        //OnColorPreview?.Invoke(color);
     }
 
     public void OnPointerExit(PointerEventData data)
     {
         tracking = false;
-    }
-
-    public void OnPointerMove(PointerEventData data)
-    {
-
     }
 
     private Color ColorChecker(Vector2 eventPos)
