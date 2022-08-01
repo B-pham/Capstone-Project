@@ -143,6 +143,22 @@ PrefabInstance:
       propertyPath: ScreenList.Array.data[13]
       value: 
       objectReference: {fileID: 2957814681593868469}
+    - target: {fileID: 4952641012198942222, guid: f038c6c71457b08449b28e0b3b08641d, type: 3}
+      propertyPath: m_Padding.w
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952641012198942222, guid: f038c6c71457b08449b28e0b3b08641d, type: 3}
+      propertyPath: m_Padding.x
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952641012198942222, guid: f038c6c71457b08449b28e0b3b08641d, type: 3}
+      propertyPath: m_Padding.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4952641012198942222, guid: f038c6c71457b08449b28e0b3b08641d, type: 3}
+      propertyPath: m_Padding.z
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 5631116861065392807, guid: f038c6c71457b08449b28e0b3b08641d, type: 3}
       propertyPath: XRRig
       value: 
