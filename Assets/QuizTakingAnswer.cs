@@ -22,6 +22,7 @@ public abstract class QuizTakingAnswer : MonoBehaviour
         {
             LoadAnswerText();
             SetToggleGroup();
+            LoadSelected();
         }
     }
 
@@ -30,5 +31,9 @@ public abstract class QuizTakingAnswer : MonoBehaviour
         AnswerTextBox.text = targetAnswer.AnswerText;
     }
 
+    abstract protected void LoadSelected();
+
     abstract protected void SetToggleGroup();
+
+    abstract protected void OnSelected();
 }

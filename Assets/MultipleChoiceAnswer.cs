@@ -5,6 +5,16 @@ using UnityEngine.UI;
 
 public class MultipleChoiceAnswer : QuizTakingAnswer
 {
+    public void Toggle()
+    {
+        OnSelected();
+    } 
+
+    protected override void OnSelected()
+    {
+        targetAnswer.IsSelected = AnswerToggle.isOn;
+    }
+
     protected override void SetToggleGroup()
     {
         ToggleGroup toggleGroup = answerContainer.GetComponent<ToggleGroup>();
@@ -13,4 +23,10 @@ public class MultipleChoiceAnswer : QuizTakingAnswer
             AnswerToggle.group = toggleGroup;
         }
     }
+
+    protected override void LoadSelected()
+    {
+        AnswerToggle.isOn = targetAnswer.IsSelected;
+    }
+
 }

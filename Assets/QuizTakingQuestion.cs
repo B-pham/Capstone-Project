@@ -34,7 +34,6 @@ public abstract class QuizTakingQuestion : MonoBehaviour
         }
     }
 
-
     protected void LoadQuestionText()
     {
         questionText.text = targetQuestion.Text;

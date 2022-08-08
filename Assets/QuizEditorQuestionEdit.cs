@@ -36,26 +36,6 @@ public class QuizEditorQuestionEdit : QuizEditorQuestion
         }
     }
 
-    protected override void LoadAnswers()
-    {
-        ClearAnswers();
-
-        GameObject newAnswer;
-        foreach (QuizAnswer answer in targetQuestion.Answers)
-        {
-            newAnswer = Instantiate(answerPrefab, answerContainer.transform);
-            newAnswer.GetComponent<QuizEditorAnswer>().BuildMe(answer, answerContainer); //Create a component in your Answer prefab and include a public BuildMe script that takes data from QuizAnswer.cs
-        }
-    }
-
-    protected override void ClearAnswers()
-    {
-        foreach (Transform child in answerContainer.transform)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-    }
-
     public override void DeleteButton()
     {
 
