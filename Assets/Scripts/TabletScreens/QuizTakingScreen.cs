@@ -12,9 +12,7 @@ public class QuizTakingScreen : QuizScreen
     [SerializeField] private AssessmentHandler assessmentHandler;
 
     //Prefabs for each quiz type
-    [SerializeField] private GameObject MultipleChoicePrefab;
-    [SerializeField] private GameObject PlacementPrefab;
-    [SerializeField] private GameObject SelectionPrefab;
+    [SerializeField] private QuizAnswerPrefabLoader QuizPrefabLoader;
 
     private int CurrentQuestionNum = 0;
     private int TotalQuestionsCount;
@@ -101,31 +99,7 @@ public class QuizTakingScreen : QuizScreen
         {
             QuizQuestion.QuestionTypes quizType = (QuizQuestion.QuestionTypes)Enum.Parse(enumType, questionTypeString);
 
-            switch(quizType)
-            {
-                case QuizQuestion.QuestionTypes.MultipleChoice:
-                    {
-                        Debug.Log("Multiple Choice Quiz");
-                        return MultipleChoicePrefab;
-                    }
-
-                case QuizQuestion.QuestionTypes.Placement:
-                    {
-                        Debug.Log("Placement Quiz");
-                        return PlacementPrefab;
-                    }
-
-                case QuizQuestion.QuestionTypes.ObjectSelection:
-                    {
-                        Debug.Log("Object Selection Quiz");
-                        return SelectionPrefab;
-                    }
-
-                default:
-                    {
-                        return null;
-                    }
-            }
+            return QuizPrefabLoader.GetPrefabType(quizType);
         }
 
         return null;

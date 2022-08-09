@@ -47,4 +47,11 @@ public abstract class QuizAnswer : IQuizAnswer
     {
         IsSelected = !IsSelected;
     }
+
+    public bool AnswerObjectExists()
+    {
+        bool exists = PlacedObjectsHandler.Instance.CheckObjectExists(answerText);
+
+        return exists;
+    }
 }

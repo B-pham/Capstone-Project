@@ -15,6 +15,9 @@ abstract public class QuizEditorAnswer : MonoBehaviour
     [SerializeField] protected TMPro.TMP_Text AnswerTextBox;
     [SerializeField] protected TMPro.TMP_InputField AnswerEditBox;
 
+    [Header("Optional Error Checking")]
+    [SerializeField] protected TMPro.TMP_Text ErrorTextBox;
+
     public void BuildMe(QuizAnswer answer, GameObject container)
     {
         targetAnswer = answer;
@@ -34,6 +37,11 @@ abstract public class QuizEditorAnswer : MonoBehaviour
 
         if (AnswerEditBox)
             AnswerEditBox.text = targetAnswer.AnswerText;
+
+        if (ErrorTextBox != null)
+        {
+            AnswerTextErrorCheck();
+        }
     }
 
     abstract protected void QuestionTypeMethods();
@@ -41,6 +49,22 @@ abstract public class QuizEditorAnswer : MonoBehaviour
     public void OnAnswerTextChanged()
     {
         targetAnswer.AnswerText = AnswerEditBox.text;
+        if (ErrorTextBox != null)
+        {
+            AnswerTextErrorCheck();
+        }
+    }
+
+    protected virtual void AnswerTextErrorCheck()
+    {
+        if (!targetAnswer.AnswerObjectExists())
+        {
+            ErrorTextBox.gameObject.SetActive(true);
+            ErrorTextBox.text = "Input object is not found!";
+        } else
+        {
+            ErrorTextBox.gameObject.SetActive(false);
+        }
     }
 
     public void DeleteAnswerButton()
