@@ -125,4 +125,66 @@ public class QuizSaver : MonoBehaviour
 
         return dtColumn;
     }
+
+    public void QuizSubmission(QuizObj quiz, string filePath)
+    {
+        DataTable settingData = createSettingTable(quiz);
+        DataTable quizData = createSubmissionTable(quiz);
+
+        if (excelWriter.chooseFile(filePath))
+        {
+            DataTable[] sendTables = { settingData, quizData };
+            string[] headers = { "Questions" };
+            excelWriter.writeCSV(sendTables, headers);
+        }
+    }
+
+    private DataTable createSubmissionTable(QuizObj quiz)
+    {
+        DataTable quizTable = new DataTable("Quiz");
+        DataColumn dtColumn;
+        DataRow dtRow;
+
+        //Create Quiz Type Column
+        dtColumn = createColumn("System.String", "Question Type");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Question Column
+        dtColumn = createColumn("System.String", "Question");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Choose Multiple Column
+        dtColumn = createColumn("System.Boolean", "Choose Multiple");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Options Column
+        dtColumn = createColumn("System.String", "Options");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Correct Answer Column
+        dtColumn = createColumn("System.String", "Entered Answer");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Point Value Column
+        dtColumn = createColumn("System.Int16", "Point Value");
+        quizTable.Columns.Add(dtColumn);
+
+        //Create Rows
+        List<QuizQuestion> questions = quiz.QuestionsList;
+
+        foreach (QuizQuestion question in questions)
+        {
+            dtRow = quizTable.NewRow();
+            dtRow["Question Type"] = question.Type;
+            dtRow["Question"] = question.Text;
+            dtRow["Choose Multiple"] = question.ChooseMultiple;
+            dtRow["Options"] = question.OptionsText;
+            dtRow["Entered Answer"] = question.EnteredText;
+            dtRow["Point Value"] = question.PointValue;
+
+            quizTable.Rows.Add(dtRow);
+        }
+
+        return quizTable;
+    }
 }

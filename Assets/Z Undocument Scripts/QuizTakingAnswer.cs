@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public abstract class QuizTakingAnswer : MonoBehaviour
 {
     [SerializeField] protected TMPro.TMP_Text AnswerTextBox;
+    [SerializeField] protected TMPro.TMP_Text ErrorText;
 
     [Header("No entry required for targetAnswer, visible in editor for debug purposes.")]
     [SerializeField] protected QuizAnswer targetAnswer;

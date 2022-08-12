@@ -13,6 +13,18 @@ public class QuizOSAnswer : QuizAnswer
         CorrectAnswer = isCorrect.ToString();
     }
 
+    public override string EnteredAnswer { get => GetEnteredValue(); set => throw new NotImplementedException(); }
+
+    private string GetEnteredValue()
+    {
+        string returnString = "";
+        if (IsSelected)
+        {
+            returnString += AnswerText;
+        }
+        return returnString;
+    }
+
     public override string CorrectTextValue()
     {
         if (CorrectAnswer.ToLower() == "true")

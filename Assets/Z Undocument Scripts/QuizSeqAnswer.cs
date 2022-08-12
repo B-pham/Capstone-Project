@@ -6,12 +6,30 @@ using System;
 [System.Serializable]
 public class QuizSeqAnswer : QuizAnswer
 {
+    private int enteredNum;
     public QuizSeqAnswer(string answerText, int orderNum)
     {
         AnswerText = answerText;
         IsSelected = false;
         CorrectAnswer = orderNum.ToString();
     }
+
+    public override string EnteredAnswer { 
+        get => enteredNum.ToString();
+        set => SetEnteredNum(value); }
+
+    private void SetEnteredNum(string value)
+    {
+        int enteredValue;
+
+        if (int.TryParse(value, out enteredValue))
+        {
+            enteredNum = enteredValue;
+        } else
+        {
+            ErrorManager.Instance.ThrowError("Invalid Value! Must be integer.", true);
+        }
+    } 
 
     public override string CorrectTextValue()
     {

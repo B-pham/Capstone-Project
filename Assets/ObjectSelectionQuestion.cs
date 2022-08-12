@@ -15,6 +15,14 @@ public class ObjectSelectionQuestion : QuizTakingQuestion
 
     protected override void LoadChooseMultiple()
     {
-        
+        bool multi = targetQuestion.ChooseMultiple;
+        chooseMultipleText.gameObject.SetActive(multi);
+        HighlightingManager.Instance.MultiSelectOn = multi;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        HighlightingManager.Instance.MultiSelectOn = false;
     }
 }

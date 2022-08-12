@@ -17,10 +17,12 @@ public static class QuizAnswerTypeHandler
                 return quizAnswer;
 
             case QuizQuestion.QuestionTypes.ObjectSelection:
-                return null;
+                quizAnswer = BuildOSAnswer(answerText, Convert.ToBoolean(correctText));
+                return quizAnswer;
 
             case QuizQuestion.QuestionTypes.Placement:
-                return null;
+                quizAnswer = BuildPlacementAnswer(answerText, Convert.ToBoolean(correctText));
+                return quizAnswer;
 
             case QuizQuestion.QuestionTypes.Sequence:
                 quizAnswer = BuildSequenceAnswer(answerText, Convert.ToInt16(correctText));

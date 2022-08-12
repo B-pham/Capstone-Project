@@ -12,7 +12,8 @@ public class SequenceAnswer : QuizTakingAnswer
 
     protected override void AnswerEntry()
     {
-        targetAnswer.EnteredAnswer = inputBox.text;
+        if (inputBox.text != string.Empty)
+            targetAnswer.EnteredAnswer = inputBox.text;
     }
 
     protected override void ClassBuilder()

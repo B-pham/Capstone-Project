@@ -17,7 +17,6 @@ public class QuizQuestion
     [SerializeField] private bool highlight;
     [SerializeField] private string highlightedObject;
     [SerializeField, SerializeReference] private List<QuizAnswer> answers;
-
     [SerializeField] private int pointValue;
 
     public string Type
@@ -63,6 +62,21 @@ public class QuizQuestion
         }
     }
 
+    public string EnteredText
+    {
+        get
+        {
+            string enteredStr = "";
+            foreach (QuizAnswer answer in answers)
+            {
+                string enteredAnswer = answer.EnteredAnswer;
+                if (!string.IsNullOrEmpty(enteredAnswer))
+                    enteredStr += answer.EnteredAnswer + "|";
+            }
+            return enteredStr.Substring(0, enteredStr.Length - 1);
+        }
+    }
+
     public string CorrectText
     {
         get
@@ -80,14 +94,14 @@ public class QuizQuestion
 
     public int PointValue
     {
-        get;
-        set;
+        get { return pointValue; }
+        set { pointValue = value; }
     }
 
     public QuizQuestion()
     { 
     }
-
+    
     public QuizQuestion(string text)
     {
         questionText = text;
@@ -95,6 +109,7 @@ public class QuizQuestion
         highlight = false;
         SetHighlightObject("");
         answers = new List<QuizAnswer>();
+        PointValue = 1;
     }
 
     public void SelectAnswer(int selectedOption)
@@ -142,7 +157,7 @@ public class QuizQuestion
         highlight = StrToBool(question[3].ToString());
         SetHighlightObject(question[4].ToString());
         answers = BuildAnswersFromExcel(question[5].ToString(), question[6].ToString());
-        pointValue = int.Parse(question[7].ToString());
+        PointValue = int.Parse(question[7].ToString());
     }
 
     private QuestionTypes SetQuestionType(string questionTypeStr)

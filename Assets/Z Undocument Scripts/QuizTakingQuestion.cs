@@ -7,6 +7,7 @@ public abstract class QuizTakingQuestion : MonoBehaviour
 {
     [SerializeField] protected TMPro.TMP_Text questionText;
     [SerializeField] protected TMPro.TMP_Text chooseMultipleText;
+    [SerializeField] protected TMPro.TMP_Text pointValueText;
 
     [SerializeField] protected GameObject answerContainer;
     [SerializeField] protected GameObject answerPrefab;
@@ -29,6 +30,7 @@ public abstract class QuizTakingQuestion : MonoBehaviour
         {
             LoadQuestionText();
             LoadChooseMultiple();
+            LoadPointValue();
             LoadHighlight();
             LoadAnswers();
             ClassBuilder();
@@ -41,6 +43,17 @@ public abstract class QuizTakingQuestion : MonoBehaviour
     }
 
     protected abstract void LoadChooseMultiple();
+
+    private void LoadPointValue()
+    {
+        string pointText = "(" + targetQuestion.PointValue.ToString() + " Points)";
+        pointValueText.text = pointText;
+
+        if (targetQuestion.PointValue > 1)
+            pointValueText.gameObject.SetActive(true);
+        else
+            pointValueText.gameObject.SetActive(false);
+    }
 
     protected virtual void LoadHighlight()
     {

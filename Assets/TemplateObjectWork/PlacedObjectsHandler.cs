@@ -97,11 +97,15 @@ public class PlacedObjectsHandler : MonoBehaviour
 
     public bool CheckObjectExists(int index)
     {
-        bool doesExist = true;
-        GameObject SearchObject = PlacedObjects[index];
-        if (SearchObject == null)
+        bool doesExist = false;
+
+        if (PlacedObjects.Count < index)
         {
-            doesExist = false;
+            GameObject SearchObject = PlacedObjects[index];
+            if (SearchObject != null)
+            {
+                doesExist = true;
+            }
         }
 
         return doesExist;
@@ -129,5 +133,11 @@ public class PlacedObjectsHandler : MonoBehaviour
     public GameObject GetObject(int index)
     {
         return PlacedObjects[index];
+    }
+
+    public GameObject GetObject(string name)
+    {
+        GameObject SearchObject = PlacedObjects.Where(x => x.name == name).SingleOrDefault();
+        return SearchObject;
     }
 }

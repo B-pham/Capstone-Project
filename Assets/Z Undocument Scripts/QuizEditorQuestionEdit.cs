@@ -51,6 +51,19 @@ public class QuizEditorQuestionEdit : QuizEditorQuestion
         targetQuestion.Text = QuestionTextBox.text;
     }
 
+    public void OnPointValueChanged()
+    {
+        int enteredPoints;
+
+        if (int.TryParse(pointValueInput.text, out enteredPoints))
+        {
+            targetQuestion.PointValue = enteredPoints;
+        } else
+        {
+            ErrorManager.Instance.ThrowError("Point value must be an integer value!", true);
+        }
+    }
+
     public void OnChooseMultipleToggle()
     {
         bool chooseMult = multipleAnswersToggle.isOn;

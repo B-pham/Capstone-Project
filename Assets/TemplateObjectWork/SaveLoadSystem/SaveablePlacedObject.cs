@@ -24,6 +24,8 @@ public class SaveablePlacedObject : MonoBehaviour
         {
             graphicDataObject = value;
         }
+
+        get { return graphicDataObject; }
     }
 
     public PlacedObjectSaveData GetSaveableData()

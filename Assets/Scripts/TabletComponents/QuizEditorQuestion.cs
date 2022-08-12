@@ -18,6 +18,7 @@ abstract public class QuizEditorQuestion : MonoBehaviour
     [SerializeField] protected Toggle multipleAnswersToggle;
     [SerializeField] protected Toggle highlightObjectToggle;
     [SerializeField] protected TMPro.TMP_InputField targetObjectInput;
+    [SerializeField] protected TMPro.TMP_InputField pointValueInput;
 
     protected QuizScreen quizScreen;
 
@@ -29,6 +30,7 @@ abstract public class QuizEditorQuestion : MonoBehaviour
 
         if (targetQuestion != null)
         {
+            LoadPointValue();
             LoadOptions();
             LoadQuestionText();
             LoadChooseMultiple();
@@ -36,6 +38,12 @@ abstract public class QuizEditorQuestion : MonoBehaviour
             LoadAnswers();
         }
     }
+
+    private void LoadPointValue()
+    {
+        pointValueInput.text = targetQuestion.PointValue.ToString();
+    }
+
     private void LoadOptions()
     {
         QuestionType.ClearOptions();

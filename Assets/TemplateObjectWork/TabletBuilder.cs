@@ -97,23 +97,25 @@ public class TabletBuilder : MonoBehaviour
 
     public void getValues()
     {
-        canUndo = true;
-        position = handler.GetPosition(index);
-        rotation = handler.GetRotation(index);
-        scaleSize = handler.GetScale(index);
-        eulerAngle = rotation.eulerAngles;
-        saveValues();
+        if (handler.CheckObjectExists(index))
+        {
+            canUndo = true;
+            position = handler.GetPosition(index);
+            rotation = handler.GetRotation(index);
+            scaleSize = handler.GetScale(index);
+            eulerAngle = rotation.eulerAngles;
+            saveValues();
 
-        positionX.GetComponent<TMP_InputField>().text = position.x.ToString();
-        positionY.GetComponent<TMP_InputField>().text = position.y.ToString();
-        positionZ.GetComponent<TMP_InputField>().text = position.z.ToString();
+            positionX.GetComponent<TMP_InputField>().text = position.x.ToString();
+            positionY.GetComponent<TMP_InputField>().text = position.y.ToString();
+            positionZ.GetComponent<TMP_InputField>().text = position.z.ToString();
 
-        rotationX.GetComponent<TMP_InputField>().text = eulerAngle.x.ToString();
-        rotationY.GetComponent<TMP_InputField>().text = eulerAngle.y.ToString();
-        rotationZ.GetComponent<TMP_InputField>().text = eulerAngle.z.ToString();
+            rotationX.GetComponent<TMP_InputField>().text = eulerAngle.x.ToString();
+            rotationY.GetComponent<TMP_InputField>().text = eulerAngle.y.ToString();
+            rotationZ.GetComponent<TMP_InputField>().text = eulerAngle.z.ToString();
 
-        scale.GetComponent<TMP_InputField>().text = scaleSize.x.ToString();
-
+            scale.GetComponent<TMP_InputField>().text = scaleSize.x.ToString();
+        }
     }
 
     public void undoValues()

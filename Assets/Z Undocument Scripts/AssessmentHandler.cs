@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class AssessmentHandler : MonoBehaviour
 {
+    [SerializeField] private string defaultFileEnd = "_QuizSubmission";
+    [SerializeField] private string extension = ".csv";
     [SerializeField] private QuizObj QuestionsAnswered;
+    [SerializeField] private QuizSaver quizSaver;
 
     public int QuestionsAnsweredCount
     {
@@ -57,7 +60,7 @@ public class AssessmentHandler : MonoBehaviour
 
         foreach (QuizAnswer answer in answerList)
         {
-            if (answer.IsSelected)
+            if (!string.IsNullOrEmpty(answer.EnteredAnswer))
             {
                 isAnswered = true;
                 break;
@@ -65,5 +68,12 @@ public class AssessmentHandler : MonoBehaviour
         }
 
         return isAnswered;
+    }
+
+    public void SaveQuizForSubmission()
+    {
+        string filePath = Application.persistentDataPath + "/" + QuestionsAnswered.Name + defaultFileEnd + extension;
+
+        quizSaver.QuizSubmission(QuestionsAnswered, filePath);
     }
 }

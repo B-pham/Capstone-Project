@@ -142,5 +142,7 @@ public class QuizTakingScreen : QuizScreen
         {
             Debug.Log("Quiz Incomplete! Throw warning!");
         }
+
+        assessmentHandler.SaveQuizForSubmission();
     }
 }

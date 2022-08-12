@@ -23,7 +23,7 @@ public abstract class QuizAnswer : IQuizAnswer
             return EnteredAnswer == CorrectAnswer;
         }
     }
-    public string EnteredAnswer { get; set; }
+    public abstract string EnteredAnswer { get; set; }
     public string CorrectAnswer
     {
         get { return correctAnswer; }

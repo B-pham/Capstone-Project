@@ -582,7 +582,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8928650549208059875}
   m_HandleRect: {fileID: 4319134840349118139}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1.0000005
   m_Size: 0.7286122
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1635,7 +1635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8680410595912584694}
-  - component: {fileID: 4125568663007644714}
+  - component: {fileID: 3025290373170440974}
   m_Layer: 0
   m_Name: TopOptionButtons
   m_TagString: Untagged
@@ -1663,7 +1663,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4125568663007644714
+--- !u!114 &3025290373170440974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1672,7 +1672,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5104349349796993756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -1682,7 +1682,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
@@ -2211,7 +2211,6 @@ MonoBehaviour:
   previousScreen: Quiz Menu
   questionPrefab: {fileID: 7006632555933125357, guid: addd469cf15dcc9498934b5f235744af, type: 3}
   QuizTitle: {fileID: 5483234652433697287}
-  QuizType: {fileID: 7345855221155242184}
 --- !u!1 &9029605824793635800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2796,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6732797102613302702, guid: addd469cf15dcc9498934b5f235744af, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732797102613302702, guid: addd469cf15dcc9498934b5f235744af, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732797102613302702, guid: addd469cf15dcc9498934b5f235744af, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732797102613302702, guid: addd469cf15dcc9498934b5f235744af, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7006632555933125357, guid: addd469cf15dcc9498934b5f235744af, type: 3}
       propertyPath: m_Name
       value: QuestionPrefab (1)
@@ -2947,17 +2962,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addd469cf15dcc9498934b5f235744af, type: 3}
---- !u!114 &7345855221155242184 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6241700428588441415, guid: addd469cf15dcc9498934b5f235744af, type: 3}
-  m_PrefabInstance: {fileID: 3706252620218957711}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &507580800403798085 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3775154565668833226, guid: addd469cf15dcc9498934b5f235744af, type: 3}
