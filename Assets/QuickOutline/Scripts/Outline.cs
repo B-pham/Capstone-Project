@@ -155,6 +155,7 @@ public class Outline : MonoBehaviour {
     // Destroy material instances
     Destroy(outlineMaskMaterial);
     Destroy(outlineFillMaterial);
+
   }
 
   void Bake() {

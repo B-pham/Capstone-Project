@@ -140,23 +140,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2717516907585968519, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4674883326363597506, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
       propertyPath: m_Name
       value: PlaViewPrefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7084109299982198577, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7084109299982198577, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7084109299982198577, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 7084109299982198577, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398864100034581412, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398864100034581412, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398864100034581412, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398864100034581412, guid: 3784c00ed6ad7e6479bfe56e57599d2f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

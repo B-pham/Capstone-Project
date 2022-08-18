@@ -42,6 +42,7 @@ public class HighlightingManager : MonoBehaviour
 
     public void AddHighlight(GameObject target)
     {
+        Debug.Log("Highlight Added");
         Outline outline;
 
         outline = target.GetComponent<Outline>();
@@ -55,6 +56,7 @@ public class HighlightingManager : MonoBehaviour
 
     public void RemoveHighlight(GameObject target)
     {
+        Debug.Log("Highlight Removed");
         Outline outline = target.GetComponent<Outline>();
 
 
@@ -71,8 +73,9 @@ public class HighlightingManager : MonoBehaviour
 
     public void AddSelected(GameObject target)
     {
+        Debug.Log("Select Added");
         if (!MultiSelectOn)
-            RemoveAllSelected();
+            RemoveAllSelected(target);
 
         Outline outline;
 
@@ -90,21 +93,45 @@ public class HighlightingManager : MonoBehaviour
 
     public void RemoveSelected(GameObject target)
     {
-        if(IsSelected(target))
+        Debug.Log("Select Removed");
+        if (IsSelected(target))
+        {
+            Outline outline;
+
+            outline = target.GetComponent<Outline>();
+
             SelectedObjects.Remove(target);
-        RemoveHighlight(target);
+            Destroy(outline);
+        }
     }
 
-    public void RemoveAllSelected()
+    public void RemoveAllSelected(GameObject? exception)
     {
         foreach (GameObject obj in SelectedObjects)
         {
-            RemoveSelected(obj);
+            if (obj != exception)
+                RemoveSelected(obj);
         }
     }
 
     private bool IsSelected(GameObject target)
     {
         return SelectedObjects.Contains(target);
+    }
+
+    public void ReloadSelected(GameObject target)
+    {
+        if (IsSelected(target))
+        {
+            Outline outline;
+
+            outline = target.GetComponent<Outline>();
+
+            if (!outline)
+                outline = target.AddComponent<Outline>();
+
+            outline.OutlineColor = selectedColor;
+            outline.OutlineWidth = selectedWidth;
+        }
     }
 }

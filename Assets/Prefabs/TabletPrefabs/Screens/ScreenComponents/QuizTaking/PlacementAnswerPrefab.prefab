@@ -153,8 +153,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnswerTextBox: {fileID: 5749284550488838014}
+  ErrorText: {fileID: 0}
   answerContainer: {fileID: 0}
-  placementContainerName: 
+  placementContainerName: PlacementQuizTable
+  AnswerToggle: {fileID: 4676823675656239979}
+  targetObj: {fileID: 0}
+  targetGraphic: {fileID: 0}
 --- !u!1 &6561188642051832840
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,8 +379,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MultipleChoiceAnswer, Assembly-CSharp
+      - m_Target: {fileID: 2780951739347955861}
+        m_TargetAssemblyTypeName: PlacementAnswer, Assembly-CSharp
         m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
