@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadScreen.unity
     guid: da5bcac8187e0b145958b41fccbcdcfa
   - enabled: 1
+    path: Assets/Scenes/LoginScreen.unity
+    guid: fe760ade2cbab71439d75f55c70b81c7
+  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: e7f72fcb4083de64d9ab2e15b2387f4e
   - enabled: 1

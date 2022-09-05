@@ -450,6 +450,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineColor: {r: 1, g: 0, b: 0, a: 1}
   outlineWidth: 10
+  selectedColor: {r: 0, g: 1, b: 0, a: 1}
+  selectedWidth: 10
+  SelectedObjects: []
 --- !u!4 &845170296
 Transform:
   m_ObjectHideFlags: 0
@@ -683,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadingSceneName: LoadScreen
-  DefaultSceneName: Lobby
+  DefaultSceneName: LoginScreen
   loadMode: 0
 --- !u!4 &1345465538
 Transform:
