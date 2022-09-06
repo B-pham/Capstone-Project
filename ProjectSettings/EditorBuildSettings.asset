@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/OnlineLabViewer.unity
     guid: 1d0d54455badf194a87d5616e2ef3a90
   - enabled: 1
-    path: Assets/Scenes/Demos/Avatar Custom.unity
+    path: Assets/Scenes/Avatar Custom.unity
     guid: 391405db3dbd0524292d9940348d3d13
   - enabled: 1
     path: Assets/Scenes/InsideOfASkullScene.unity
