@@ -12,17 +12,20 @@ public class UIManager : MonoBehaviour
     public InputField loginPassword;
     public InputField loginAccessCode;
     public Text registerMessage;
-    public Text loginMessage;
-    public Text accessCodeMessage;
+    public Text UserEmail;
+    public Text UserPassword;
+    public Text UserAccessCode;
 
     public void registerButton() {
-        loginMessage.text = registerEmail.text;
-        accessCodeMessage.text = registerAccessCode.text;
+        UserEmail.text = registerEmail.text;
+        UserPassword.text = registerPassword.text;
+        UserAccessCode.text = registerAccessCode.text;
     }
 
     public void loginButton(){
-        loginMessage.text = loginEmail.text;
-        accessCodeMessage.text = loginAccessCode.text;
+        UserEmail.text = loginEmail.text;
+        UserPassword.text = loginPassword.text;
+        UserAccessCode.text = loginAccessCode.text;
     }
 
     public void deleteRegisterInfo(){
@@ -35,6 +38,10 @@ public class UIManager : MonoBehaviour
         loginEmail.text = "";
         loginPassword.text = "";
         loginAccessCode.text = "";
+    }
+
+    public void RemovePassword() {
+        UserPassword.text = "";
     }
 }
  
