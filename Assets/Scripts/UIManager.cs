@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public InputField registerEmail;
-    public InputField registerPassword;
-    public InputField registerAccessCode;
-    public InputField loginEmail;
-    public InputField loginPassword;
-    public InputField loginAccessCode;
+    public TMP_InputField registerEmail;
+    public TMP_InputField registerPassword;
+    public TMP_InputField registerAccessCode;
+    public TMP_InputField loginEmail;
+    public TMP_InputField loginPassword;
+    public TMP_InputField loginAccessCode;
     public Text registerMessage;
     public Text UserEmail;
     public Text UserPassword;
