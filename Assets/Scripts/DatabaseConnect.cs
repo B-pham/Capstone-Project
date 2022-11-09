@@ -9,21 +9,42 @@ using UnityEngine.UI;
 
 public class DatabaseConnect : MonoBehaviour
 {
-    public Text username;
+    public Text email;
     public Text password;
+    public Text accessCode;
 
-    public void PublicLogin()
+    //Registration Functions
+    public void RegisterInfo()
     {
-        StartCoroutine(Login(username.text, password.text));
+        StartCoroutine(CreateUser(email.text, password.text, accessCode.text));
+        print("Success sending data!");
     }
 
-    IEnumerator Login(string username, string password)
+        IEnumerator CreateUser(string email, string password, string accessCode){
+        WWWForm form = new WWWForm();
+        form.AddField("emailPost", email);
+        form.AddField("passwordPost", password);
+        form.AddField("accessCodePost", accessCode);
+        UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/register.php", form);
+        yield return www.SendWebRequest();
+        Debug.Log(www.downloadHandler.text);
+    }
+
+
+    //Login Functions
+    public void LoginInfo()
+    {
+        StartCoroutine(LoginUser(email.text, password.text, accessCode.text));
+        print("Success sending data!");
+    }
+
+    IEnumerator LoginUser(string email, string password, string accessCode)
     {
         WWWForm form = new WWWForm();
-        form.AddField("LoginUser", username);
-        form.AddField("LoginPass", password);
+        form.AddField("emailPost", email);
+        form.AddField("passwordPost", password);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/index.php", form))
         {
             yield return www.SendWebRequest();
 

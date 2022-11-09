@@ -1235,8 +1235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b004b7146a2c429449a27d99c80c67dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 1594770153}
+  email: {fileID: 0}
   password: {fileID: 0}
+  accessCode: {fileID: 0}
 --- !u!114 &105175215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,8 +1659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b004b7146a2c429449a27d99c80c67dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 465366667}
+  email: {fileID: 465366667}
   password: {fileID: 5196262}
+  accessCode: {fileID: 1609629757}
 --- !u!114 &155473625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3913,6 +3915,7 @@ GameObject:
   - component: {fileID: 322464481}
   - component: {fileID: 322464480}
   - component: {fileID: 322464479}
+  - component: {fileID: 322464482}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3985,6 +3988,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &322464482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322464478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f62a040535bd6b4d9c444dc0a02a5e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  email: {fileID: 0}
+  password: {fileID: 0}
+  accessCode: {fileID: 0}
 --- !u!1001 &328956296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7128,6 +7146,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 155473624}
+        m_TargetAssemblyTypeName: DatabaseConnect, Assembly-CSharp
+        m_MethodName: RegisterInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &680513761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8393,7 +8423,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1602415810}
         m_TargetAssemblyTypeName: DatabaseConnect, Assembly-CSharp
-        m_MethodName: PublicLogin
+        m_MethodName: RegisterInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15494,7 +15524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3711096649575578265, guid: 0d5c77197bc97294596826e8df8c1406, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4754409411306852016, guid: 0d5c77197bc97294596826e8df8c1406, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16217,8 +16247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b004b7146a2c429449a27d99c80c67dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 1594770153}
+  email: {fileID: 1594770153}
   password: {fileID: 1159121748}
+  accessCode: {fileID: 1783717579}
 --- !u!1 &1605042814
 GameObject:
   m_ObjectHideFlags: 0
@@ -16563,6 +16594,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1602415810}
         m_TargetAssemblyTypeName: DatabaseConnect, Assembly-CSharp
         m_MethodName: PublicLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1602415810}
+        m_TargetAssemblyTypeName: DatabaseConnect, Assembly-CSharp
+        m_MethodName: LoginInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17066,8 +17109,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b004b7146a2c429449a27d99c80c67dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: {fileID: 1594770153}
+  email: {fileID: 0}
   password: {fileID: 0}
+  accessCode: {fileID: 0}
 --- !u!1001 &1683762304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20179,7 +20223,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 155473624}
         m_TargetAssemblyTypeName: DatabaseConnect, Assembly-CSharp
-        m_MethodName: PublicLogin
+        m_MethodName: LoginInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
