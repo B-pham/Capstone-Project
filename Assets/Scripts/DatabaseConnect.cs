@@ -12,15 +12,17 @@ public class DatabaseConnect : MonoBehaviour
     public Text email;
     public Text password;
     public Text accessCode;
+    public Text message;
 
     //Registration Functions
-    public void RegisterInfo()
+    public void registerUser()
     {
-        StartCoroutine(CreateUser(email.text, password.text, accessCode.text));
+        StartCoroutine(registerInfo(email.text, password.text, accessCode.text));
         print("Success sending data!");
+        message.text = "Success sending data!";
     }
 
-        IEnumerator CreateUser(string email, string password, string accessCode){
+        IEnumerator registerInfo(string email, string password, string accessCode){
         WWWForm form = new WWWForm();
         form.AddField("emailPost", email);
         form.AddField("passwordPost", password);
@@ -28,18 +30,19 @@ public class DatabaseConnect : MonoBehaviour
         UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/register.php", form);
         yield return www.SendWebRequest();
         Debug.Log(www.downloadHandler.text);
+        message.text = (www.downloadHandler.text);
     }
 
 
     //Login Functions
-    public void LoginInfo()
+    public void loginUser()
     {
-        StartCoroutine(LoginUser(email.text, password.text, accessCode.text));
+        StartCoroutine(loginInfo(email.text, password.text, accessCode.text));
         print("Success sending data!");
+        message.text = "Success sending data!";
     }
-
-    IEnumerator LoginUser(string email, string password, string accessCode)
-    {
+    
+    IEnumerator loginInfo(string email, string password, string accessCode) {
         WWWForm form = new WWWForm();
         form.AddField("emailPost", email);
         form.AddField("passwordPost", password);
@@ -51,11 +54,33 @@ public class DatabaseConnect : MonoBehaviour
             if (www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
+                message.text = (www.error);
             }
             else
             {
                 Debug.Log(www.downloadHandler.text);
+                message.text = (www.downloadHandler.text);
             }
         }
     }
+
+       
+    public void resetPassword()
+    {
+        /*
+        StartCoroutine(resetPasswordinfo(email.text));
+        print("Success sending data!");
+        */
+        print("Still in Progress");
+    }
+    /*
+    IEnumerator resetPasswordinfo(string email){
+    
+    WWWForm form = new WWWForm();
+    form.AddField("emailPost", email);
+    UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/register.php", form);
+    yield return www.SendWebRequest();
+    Debug.Log(www.downloadHandler.text);
+    }
+    */
 }
