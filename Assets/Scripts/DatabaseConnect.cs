@@ -68,16 +68,15 @@ public class DatabaseConnect : MonoBehaviour
        
     public void resetPassword()
     {
-        StartCoroutine(resetPasswordinfo(email.text, password.text));
+        StartCoroutine(resetPasswordinfo(email.text));
         print("Data Sent!");
         passwordResetMessage.text = "Data Sent!";
     }
 
-    IEnumerator resetPasswordinfo(string email, string password){
+    IEnumerator resetPasswordinfo(string email){
     WWWForm form = new WWWForm();
     form.AddField("emailPost", email);
-    form.AddField("passwordPost", password);
-    UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/resetPassword.php", form);
+    UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/ForgotPass.php", form);
     yield return www.SendWebRequest();
     Debug.Log(www.downloadHandler.text);
     passwordResetMessage.text = (www.downloadHandler.text);
