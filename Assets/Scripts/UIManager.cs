@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     public TMP_InputField loginPassword;
     public TMP_InputField loginAccessCode;
     public TMP_InputField resetPasswordEmail;
-    public Text Message;
     public Text UserEmail;
     public Text UserPassword;
     public Text UserAccessCode;
@@ -49,7 +48,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void removeResetEmail(){
-        verifyEmail.text = "";
+        resetPasswordEmail.text = "";
     }
 
     public void resetPassword(){
