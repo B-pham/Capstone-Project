@@ -45,4 +45,5 @@ EditorBuildSettings:
     com.unity.input.settings: {fileID: 11400000, guid: 4e9a3205bc6438d4490499d7d31b757a, type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 856b6f70e456d9347884cbf56c8aadf1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9362e646e6272c349b4b3ce13ed626fc, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9ca7f3af07c202f4baeaf69c173c83b5, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 1477676a0e7fa0547a7780e0e5c3a188, type: 2}
