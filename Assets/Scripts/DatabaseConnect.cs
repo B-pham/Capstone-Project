@@ -14,6 +14,7 @@ public class DatabaseConnect : MonoBehaviour
     public Text accessCode;
     public Text userMessage;
     public Text passwordResetMessage;
+    public UIManager uiManager;
 
     //Registration Functions
     public void registerUser()
@@ -78,7 +79,8 @@ public class DatabaseConnect : MonoBehaviour
     form.AddField("emailPost", email);
     UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/ForgotPass.php", form);
     yield return www.SendWebRequest();
-    Debug.Log(www.downloadHandler.text);
-    passwordResetMessage.text = (www.downloadHandler.text);
+    //Debug.Log(www.downloadHandler.text);
+    //passwordResetMessage.text = (www.downloadHandler.text);
+    passwordResetMessage.text = "Password has been sent to your email";
     }
 }
