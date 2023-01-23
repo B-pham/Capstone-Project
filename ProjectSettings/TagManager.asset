@@ -13,6 +13,8 @@ TagManager:
   - QuizList
   - LabFileManager
   - FileSelectScreen
+  - RoomLight
+  - Whiteboard
   layers:
   - Default
   - TransparentFX
