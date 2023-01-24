@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
             passwordCondition = false;
             if(string.IsNullOrEmpty(registerPassword.text)){
                 RegisterMenuTextbox.SetActive(true);
-                RegisterMenuTextboxMessage.text = "Please enter a password.";
+                RegisterMenuTextboxMessage.text = "The password field is required. Please enter a password.";
             }
             else{
                 passwordCondition = true;
@@ -89,7 +89,7 @@ public class UIManager : MonoBehaviour
             //Email Verification
             if(string.IsNullOrEmpty(registerEmail.text)){
                 RegisterMenuTextbox.SetActive(true);
-                RegisterMenuTextboxMessage.text = "Please enter an Email.";
+                RegisterMenuTextboxMessage.text = "The email field is required. Please enter an email.";
             }
             else if(!registerEmail.text.Contains("@")){
                 RegisterMenuTextbox.SetActive(true);
@@ -141,7 +141,7 @@ public class UIManager : MonoBehaviour
             passwordCondition = false;
             if(string.IsNullOrEmpty(loginPassword.text)){
                 LoginMenuTextbox.SetActive(true);
-                LoginMenuTextboxMessage.text = "Please enter a password.";
+                LoginMenuTextboxMessage.text = "The password field is required. Please enter a password.";
             }
             else{
                 passwordCondition = true;
@@ -150,7 +150,7 @@ public class UIManager : MonoBehaviour
             //Email Verification
             if(string.IsNullOrEmpty(loginEmail.text)){
                 LoginMenuTextbox.SetActive(true);
-                LoginMenuTextboxMessage.text = "Please enter an Email.";
+                LoginMenuTextboxMessage.text = "The email field is required. Please enter an email.";
             }
             else if(!loginEmail.text.Contains("@")){
                 LoginMenuTextbox.SetActive(true);
@@ -207,7 +207,7 @@ public class UIManager : MonoBehaviour
             //Email Verification
             if(string.IsNullOrEmpty(resetPasswordEmail.text)){
                 PasswordResetMenuTextbox.SetActive(true);
-                PasswordResetMenuTextboxMessage.text = "Please enter an Email.";
+                PasswordResetMenuTextboxMessage.text = "The email field is required. Please enter an email.";
             }
             else if(!resetPasswordEmail.text.Contains("@")){
                 PasswordResetMenuTextbox.SetActive(true);
@@ -226,8 +226,8 @@ public class UIManager : MonoBehaviour
                 PasswordResetMenuTextbox.SetActive(true);
                 PasswordResetMenuTextboxMessage.text = "Password Reset link has been sent to your email";
                 updatePasswordResetInfo();
-                resetPassword();
                 clearResetEmail();
+                resetPassword();
             }            
         }
 
@@ -300,7 +300,7 @@ public class UIManager : MonoBehaviour
 
         public void updatePasswordResetInfo(){
             verifyEmail.text = resetPasswordEmail.text;
-            print(verifyEmail.text);
+            print("Password reset link sent to: " + verifyEmail.text);
         }
     #endregion
 
