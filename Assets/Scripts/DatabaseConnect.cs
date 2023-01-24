@@ -16,26 +16,6 @@ public class DatabaseConnect : MonoBehaviour
     public Text passwordResetMessage;
     public UIManager uiManager;
 
-    //Registration Functions
-    public void registerUser()
-    {
-        StartCoroutine(registerInfo(email.text, password.text, accessCode.text));
-        print("Success sending data!");
-        userMessage.text = "Success sending data!";
-    }
-
-        IEnumerator registerInfo(string email, string password, string accessCode){
-        WWWForm form = new WWWForm();
-        form.AddField("emailPost", email);
-        form.AddField("passwordPost", password);
-        form.AddField("accessCodePost", accessCode);
-        UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/register.php", form);
-        yield return www.SendWebRequest();
-        Debug.Log(www.downloadHandler.text);
-        userMessage.text = (www.downloadHandler.text);
-    }
-
-
     //Login Functions
     public void loginUser()
     {
