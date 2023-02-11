@@ -10,9 +10,10 @@ public class UIManager : MonoBehaviour
 {
     [Header("References")]
     public ChangeSceneWithButton changeScene;
+    public GameObject keyboard;
     private bool emailCondition;
     private bool passwordCondition;
-
+    
     [Header("Text Variables")]
     public TMP_InputField registerEmail;
     public TMP_InputField registerPassword;
@@ -21,16 +22,18 @@ public class UIManager : MonoBehaviour
     public TMP_InputField loginPassword;
     public TMP_InputField loginAccessCode;
     public TMP_InputField resetPasswordEmail;
+    //public TMP_InputField verificationCode;
     public Text email;
     public Text password;
     public Text accessCode;
-    public Text verifyEmail;
+    public Text passwordResetEmail;
 
     [Header("Menu References")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject registerMenu;
     [SerializeField] private GameObject loginMenu;
     [SerializeField] private GameObject passwordResetMenu;
+    //[SerializeField] private GameObject verificationMenu;
     [SerializeField] private GameObject userMenu;
 
     private void Start(){
@@ -38,8 +41,12 @@ public class UIManager : MonoBehaviour
         setUpRegisterMenuButtons();
         setUpLoginMenuButtons();
         setUpPasswordResetMenuButtons();
+        //setUpVerificationMenuButtons();
         setUpUserMenuButtons();
+        //AddTriggerEvent(LoginMenuEmailInput);
     }
+
+
 
     #region MainMenu Functions
         [Header("Main Menu Variables")]
@@ -128,6 +135,7 @@ public class UIManager : MonoBehaviour
         [SerializeField] private Button LoginMenuForgotPasswordButton;
         [SerializeField] private GameObject LoginMenuTextbox;
         [SerializeField] private Text LoginMenuTextboxMessage;
+        //[SerializeField] public GameObject LoginMenuEmailInput;
  
         private void setUpLoginMenuButtons(){
             LoginMenuLoginButton.onClick.AddListener(LoginMenuLoginButtonClicked);
@@ -187,6 +195,24 @@ public class UIManager : MonoBehaviour
             clearLoginInfo();
             LoginMenuTextbox.SetActive(false);
         }
+
+        /*
+        private void AddTriggerEvent(GameObject input){
+            if(input.GetComponent<EventTrigger>() == null){
+                input.AddComponent<EventTrigger>();
+            }
+            EventTrigger trigger = input.GetComponent<EventTrigger>();
+            EventTrigger.Entry entry = new EventTrigger.Entry();
+            entry.eventID = EventTriggerType.PointerClick;
+            entry.callback.AddListener((functionIWant) => { LoginMenuEmailInputClicked(); });
+            trigger.triggers.Add(entry);
+        }
+
+        private void LoginMenuEmailInputClicked(){
+           keyboard.SetActive(true);
+        }
+        */
+        
     #endregion
     
     #region PasswordReset Menu Functions
@@ -224,10 +250,12 @@ public class UIManager : MonoBehaviour
             //Email and Password Verification
             if(emailCondition == true){
                 PasswordResetMenuTextbox.SetActive(true);
-                PasswordResetMenuTextboxMessage.text = "Password Reset link has been sent to your email";
                 updatePasswordResetInfo();
                 clearResetEmail();
                 resetPassword();
+                PasswordResetMenuTextboxMessage.text = "Password reset email has been sent!";
+                //passwordResetMenu.SetActive(false);
+                //verificationMenu.SetActive(true);
             }            
         }
 
@@ -299,10 +327,55 @@ public class UIManager : MonoBehaviour
         }
 
         public void updatePasswordResetInfo(){
-            verifyEmail.text = resetPasswordEmail.text;
-            print("Password reset link sent to: " + verifyEmail.text);
+            passwordResetEmail.text = resetPasswordEmail.text;
         }
     #endregion
+
+    /*#region Verification Functions
+        [Header("Verification Menu Variables")]
+        [SerializeField] private Button VerificationMenuResendCodeButton;
+        [SerializeField] private Button VerificationMenuSubmitButton;
+        [SerializeField] private Button VerificationMenuReturnButton;
+        [SerializeField] private GameObject VerificationMenuTextbox;
+        [SerializeField] private Text VerificationMenuTextboxMessage;
+        private int randomVerificationCode;
+
+        private void setUpVerificationMenuButtons(){
+            VerificationMenuResendCodeButton.onClick.AddListener(VerificationMenuResendCodeButtonClicked);
+            VerificationMenuSubmitButton.onClick.AddListener(VerificationMenuSubmitButtonClicked);
+            VerificationMenuReturnButton.onClick.AddListener(VerificationMenuReturnButtonClicked);
+            randomVerificationCode = Random.Range(100000,999999);
+        }
+
+        private void VerificationMenuSubmitButtonClicked(){
+            //VerifyResetCode
+            if(verificationCode.text == randomVerificationCode.ToString()){
+                verificationMenu.SetActive(false);
+                VerificationMenuTextbox.SetActive(false);
+                loginMenu.SetActive(true);
+                LoginMenuTextbox.SetActive(true);
+                LoginMenuTextboxMessage.text = "Password has been reset! Please try logging in.";
+            } 
+            else{
+                VerificationMenuTextbox.SetActive(true);
+                VerificationMenuTextboxMessage.text = "Verification Code was incorrect. Please try again.";
+            }
+        }
+
+        private void VerificationMenuReturnButtonClicked(){
+            verificationMenu.SetActive(false);
+            mainMenu.SetActive(true);
+            VerificationMenuTextbox.SetActive(false);
+        }
+
+        private void VerificationMenuResendCodeButtonClicked(){
+            randomVerificationCode = Random.Range(100000,999999);
+            resetPassword();
+            VerificationMenuTextbox.SetActive(true);
+            VerificationMenuTextboxMessage.text = "Verification code has been resent to your email.";
+        }
+    #endregion
+    */
 
     #region DatabaseConnect Functions
         //Register Functions
@@ -330,7 +403,8 @@ public class UIManager : MonoBehaviour
                 clearRegisterInfo();
             }
             else if(RegisterMenuTextboxMessage.text.Contains("Error")){
-            RegisterMenuTextboxMessage.text = "This email already has an account. Please try again or try signing in.";
+                RegisterMenuTextbox.SetActive(true);
+                RegisterMenuTextboxMessage.text = "This email already has an account. Please try again or try signing in.";
             }
         }
 
@@ -345,7 +419,7 @@ public class UIManager : MonoBehaviour
             form.AddField("emailPost", email);
             form.AddField("passwordPost", password);
 
-            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/index.php", form))
+            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net", form))
             {
                 yield return www.SendWebRequest();
 
@@ -378,17 +452,18 @@ public class UIManager : MonoBehaviour
         //Password Reset Functions
         public void resetPassword()
     {
-        StartCoroutine(resetPasswordinfo(verifyEmail.text));
+        StartCoroutine(resetPasswordinfo(passwordResetEmail.text));
     }
-
-        IEnumerator resetPasswordinfo(string email){
+    
+        IEnumerator resetPasswordinfo(string passwordResetEmail){
             WWWForm form = new WWWForm();
-            form.AddField("emailPost", email);
+            form.AddField("passwordResetEmailPost", passwordResetEmail);
+            //form.AddField("verificationCodePost", verificationCode);
             UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/ForgotPass.php", form);
             yield return www.SendWebRequest();
             Debug.Log(www.downloadHandler.text);
-            //passwordResetMessage.text = (www.downloadHandler.text);
-            PasswordResetMenuTextboxMessage.text = "Password Reset link has been sent to your email";
+            //VerificationMenuTextbox.SetActive(true);
+            //VerificationMenuTextboxMessage.text = "Verification code and password reset link has been sent to your email";
         }
     #endregion
 
