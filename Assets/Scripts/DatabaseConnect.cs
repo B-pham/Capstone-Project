@@ -29,7 +29,7 @@ public class DatabaseConnect : MonoBehaviour
         form.AddField("emailPost", email);
         form.AddField("passwordPost", password);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/index.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/index.php", form))
         {
             yield return www.SendWebRequest();
 
@@ -57,7 +57,7 @@ public class DatabaseConnect : MonoBehaviour
     IEnumerator resetPasswordinfo(string email){
     WWWForm form = new WWWForm();
     form.AddField("emailPost", email);
-    UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/ForgotPass.php", form);
+    UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/ForgotPass.php", form);
     yield return www.SendWebRequest();
     //Debug.Log(www.downloadHandler.text);
     //passwordResetMessage.text = (www.downloadHandler.text);
