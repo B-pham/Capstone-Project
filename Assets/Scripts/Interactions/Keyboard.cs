@@ -152,7 +152,7 @@ namespace mfitzer.Interactions
             inputField = textbox;
         }
 
-        private void OnEnable()
+        public void OnEnable()
         {
             if (!EnableOnInput) {
                 this.gameObject.SetActive(false);
@@ -162,7 +162,7 @@ namespace mfitzer.Interactions
             }
         }
 
-        private void OnDisable()
+        public void OnDisable()
         {
             EnableDrumsticks(false);
         }
