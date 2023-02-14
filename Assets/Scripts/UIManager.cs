@@ -102,10 +102,6 @@ public class UIManager : MonoBehaviour
                 RegisterMenuTextbox.SetActive(true);
                 RegisterMenuTextboxMessage.text = "Please enter a valid Email.";
             } 
-            else if(!registerEmail.text.Contains(".com")){
-                RegisterMenuTextbox.SetActive(true);
-                RegisterMenuTextboxMessage.text = "Please enter a valid Email.";
-            } 
             else{
                 emailCondition = true;
             }
@@ -161,10 +157,6 @@ public class UIManager : MonoBehaviour
                 LoginMenuTextboxMessage.text = "The email field is required. Please enter an email.";
             }
             else if(!loginEmail.text.Contains("@")){
-                LoginMenuTextbox.SetActive(true);
-                LoginMenuTextboxMessage.text = "Please enter a valid Email.";
-            } 
-            else if(!loginEmail.text.Contains(".com")){
                 LoginMenuTextbox.SetActive(true);
                 LoginMenuTextboxMessage.text = "Please enter a valid Email.";
             } 
@@ -236,10 +228,6 @@ public class UIManager : MonoBehaviour
                 PasswordResetMenuTextboxMessage.text = "The email field is required. Please enter an email.";
             }
             else if(!resetPasswordEmail.text.Contains("@")){
-                PasswordResetMenuTextbox.SetActive(true);
-                PasswordResetMenuTextboxMessage.text = "Please enter a valid Email.";
-            } 
-            else if(!resetPasswordEmail.text.Contains(".com")){
                 PasswordResetMenuTextbox.SetActive(true);
                 PasswordResetMenuTextboxMessage.text = "Please enter a valid Email.";
             } 
