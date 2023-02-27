@@ -824,7 +824,7 @@ namespace Autohand {
         }
 
         public void SetLayer() {
-            SetLayerRecursive(transform, LayerMask.NameToLayer(left ? Hand.leftHandLayerName : Hand.rightHandLayerName));
+            //SetLayerRecursive(transform, LayerMask.NameToLayer(left ? Hand.leftHandLayerName : Hand.rightHandLayerName));
         }
 
         internal void SetLayerRecursive(Transform obj, int newLayer) {
