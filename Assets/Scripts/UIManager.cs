@@ -269,8 +269,14 @@ public class UIManager : MonoBehaviour
 
         private void UserMenuStartButtonClicked(){
             clearPassword();
-            changeScene.SingleLoadSceneFromManager("Lobby");
-            UserMenuTextbox.SetActive(false);
+            if((emailCondition == true) && (passwordCondition == true)){
+                changeScene.SingleLoadSceneFromManager("Lobby");
+                UserMenuTextbox.SetActive(false);
+            }
+            else{
+                UserMenuTextbox.SetActive(true);
+                UserMenuTextboxMessage.text = "Error: No Login Detected, Please return to main menu and attempt login again.";
+            }
         }
 
         private void UserMenuLogoutButtonClicked(){
@@ -393,6 +399,7 @@ public class UIManager : MonoBehaviour
             else if(RegisterMenuTextboxMessage.text.Contains("Error")){
                 RegisterMenuTextbox.SetActive(true);
                 RegisterMenuTextboxMessage.text = "This email already has an account. Please try again or try signing in.";
+                clearRegisterInfo();
             }
         }
 
@@ -428,8 +435,15 @@ public class UIManager : MonoBehaviour
                         UserMenuTextboxMessage.text = "You have successfully signed in!";
                         clearLoginInfo();
                     }
-                    else if(LoginMenuTextboxMessage.text.Contains("Error")){
-                        LoginMenuTextboxMessage.text = "Error finding Email and password linked to an account.";
+                    else if(LoginMenuTextboxMessage.text.Contains("Could not find an account for email. Please try again.")){
+                        LoginMenuTextbox.SetActive(true);
+                        LoginMenuTextboxMessage.text = "Could not find an account for email. Please try again.";
+                        clearLoginInfo();
+                    }
+                    else if(LoginMenuTextboxMessage.text.Contains("incorrect")){
+                        LoginMenuTextbox.SetActive(true);
+                        LoginMenuTextboxMessage.text = "Password is incorrect. Please try again with another email or password.";
+                        clearLoginInfo();
                     }
                     else
                         LoginMenuTextbox.SetActive(true);
