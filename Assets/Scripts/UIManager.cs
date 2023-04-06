@@ -382,7 +382,7 @@ public class UIManager : MonoBehaviour
             form.AddField("emailPost", email);
             form.AddField("passwordPost", password);
             form.AddField("accessCodePost", accessCode);
-            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/register.php", form);
+            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/register.php", form);
             yield return www.SendWebRequest();
             Debug.Log(www.downloadHandler.text);
             RegisterMenuTextboxMessage.text = (www.downloadHandler.text);
@@ -461,7 +461,7 @@ public class UIManager : MonoBehaviour
             WWWForm form = new WWWForm();
             form.AddField("passwordResetEmailPost", passwordResetEmail);
             //form.AddField("verificationCodePost", verificationCode);
-            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/ForgotPass.php", form);
+            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/ForgotPass.php", form);
             yield return www.SendWebRequest();
             Debug.Log(www.downloadHandler.text);
             //VerificationMenuTextbox.SetActive(true);
