@@ -414,7 +414,7 @@ public class UIManager : MonoBehaviour
             form.AddField("emailPost", email);
             form.AddField("passwordPost", password);
 
-            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net", form))
+            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/callLogin.php", form))
             {
                 yield return www.SendWebRequest();
 

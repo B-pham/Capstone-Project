@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1367274244
+CRC: 3821402755
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 5de79d710213d72c095cf36dc6283bd8
+    Hash: b07ee4aaff907ad67b5e01412dd10405
   TypeTreeHash:
     serializedVersion: 2
-    Hash: d9312f0741dcf046f0d6d1c6e201e90b
+    Hash: 23cb0460db07c2d5b9d7f0bf5ac31780
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -34,6 +34,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 287339d76fd9136459ccd22bb1c36b78, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 5411adffb779cd5499eb43fb2502f585, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 52abb6a4f39763c4da4d013ddc8badbd, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -41,8 +43,6 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 7661bcbef27f3f94da3402aeee60f237, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 5411adffb779cd5499eb43fb2502f585, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: e65fbed0b0ac45a4b9baf7f54b16b541, type: 3}
 - Class: 114
@@ -57,6 +57,7 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/BoneWorks/Prefabs/RightKneeCap.prefab
 - Assets/BoneWorks/Prefabs/LeftHand.prefab
+- Assets/BoneWorks/Prefabs/AttachedSkeleton.prefab
 - Assets/BoneWorks/Prefabs/RightFibulaandTibia.prefab
 - Assets/BoneWorks/Prefabs/Skull.prefab
 - Assets/BoneWorks/Prefabs/RightHumerus.prefab

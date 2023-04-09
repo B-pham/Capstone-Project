@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3624722751
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: bones
+      Dependencies: {}
+    Info_1:
+      Name: testassets
+      Dependencies: {}

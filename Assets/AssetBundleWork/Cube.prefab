@@ -132,7 +132,7 @@ MonoBehaviour:
   CopySettings: {fileID: 0}
   grabType: 0
   handType: 0
-  singleHandOnly: 1
+  singleHandOnly: 0
   allowHeldSwapping: 1
   instantGrab: 0
   useGentleGrab: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   onSqueeze:
     m_PersistentCalls:
