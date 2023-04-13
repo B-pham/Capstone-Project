@@ -221,7 +221,7 @@ public class UIManager : MonoBehaviour
 
         private void PasswordResetMenuSubmitButtonClicked(){
             emailCondition = false;
-
+            
             //Email Verification
             if(string.IsNullOrEmpty(resetPasswordEmail.text)){
                 PasswordResetMenuTextbox.SetActive(true);
@@ -241,7 +241,7 @@ public class UIManager : MonoBehaviour
                 updatePasswordResetInfo();
                 clearResetEmail();
                 resetPassword();
-                PasswordResetMenuTextboxMessage.text = "Password reset email has been sent!";
+                PasswordResetMenuTextboxMessage.text = "Password reset email has been sent! Emails may take up to 5 minutes to receive.";
                 //passwordResetMenu.SetActive(false);
                 //verificationMenu.SetActive(true);
             }            
@@ -382,7 +382,7 @@ public class UIManager : MonoBehaviour
             form.AddField("emailPost", email);
             form.AddField("passwordPost", password);
             form.AddField("accessCodePost", accessCode);
-            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/register.php", form);
+            UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/app/callRegister.php", form);
             yield return www.SendWebRequest();
             Debug.Log(www.downloadHandler.text);
             RegisterMenuTextboxMessage.text = (www.downloadHandler.text);
@@ -414,7 +414,7 @@ public class UIManager : MonoBehaviour
             form.AddField("emailPost", email);
             form.AddField("passwordPost", password);
 
-            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/callLogin.php", form))
+            using (UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/app/callLogin.php", form))
             {
                 yield return www.SendWebRequest();
 
@@ -461,7 +461,7 @@ public class UIManager : MonoBehaviour
             WWWForm form = new WWWForm();
             form.AddField("passwordResetEmailPost", passwordResetEmail);
             //form.AddField("verificationCodePost", verificationCode);
-            UnityWebRequest www = UnityWebRequest.Post("https://kvrdbconnection.azurewebsites.net/app/ForgotPass.php", form);
+            UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/app/callForgotPass.php", form);
             yield return www.SendWebRequest();
             Debug.Log(www.downloadHandler.text);
             //VerificationMenuTextbox.SetActive(true);
