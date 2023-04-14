@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectsToActivate:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4130361629660724884}
+  - {fileID: 964764346214832536}
   - {fileID: 0}
   - {fileID: 3105517139480240687}
   - {fileID: 916649937442786642}
@@ -22,7 +22,7 @@ MonoBehaviour:
   vrCheck: {fileID: 3907707965817608200}
   hasHeadset:
     m_InternalValue: 0
-  avatar: {fileID: 0}
+  avatar: {fileID: 5497453463829312052}
   NetAvatarSettings:
     m_InternalValue:
       rHairColor: 0
@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 2140834458012848739, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2232968335432574156, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_Layer
       value: 27
@@ -575,11 +579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044037159256000991, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -6.622024e-17
+      value: -7.33498e-17
       objectReference: {fileID: 0}
     - target: {fileID: 6044037159256000991, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000003555172
+      value: 0.000000039379373
       objectReference: {fileID: 0}
     - target: {fileID: 6109662552987464046, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_Enabled
@@ -959,6 +963,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd83226544491f54f92762b146aa80ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4130361629660724884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6754307657674821122, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
+  m_PrefabInstance: {fileID: 7272716378937503894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &577180679154704134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7849615574249254800, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
@@ -981,6 +990,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5497453463829312052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929312075198317218, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
+  m_PrefabInstance: {fileID: 7272716378937503894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 658002cc1a7dc5f4294d895df0d31b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &964764346214832536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7606132321651321102, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
+  m_PrefabInstance: {fileID: 7272716378937503894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3105517139480240687 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5761478733448303289, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
