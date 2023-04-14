@@ -712,11 +712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044037159256000991, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -8.009704e-17
+      value: -8.024721e-17
       objectReference: {fileID: 0}
     - target: {fileID: 6044037159256000991, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000004300177
+      value: 0.000000043082395
       objectReference: {fileID: 0}
     - target: {fileID: 6109662552987464046, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_Enabled
@@ -846,6 +846,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7139556372805217772, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
+      propertyPath: networkPlayer
+      value: 
+      objectReference: {fileID: 1559242168506227480}
     - target: {fileID: 7208584212932147480, guid: 78e86716f30fef94c94da2ce546ea711, type: 3}
       propertyPath: m_Layer
       value: 27
