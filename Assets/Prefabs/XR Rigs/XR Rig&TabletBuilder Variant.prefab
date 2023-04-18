@@ -12118,7 +12118,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ALERT!
+  m_text: Student
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28304,6 +28304,62 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3857139717567910650}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 3857139717567910650}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: sendScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SubmitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SubmitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: QuizTakingScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: QuizTakingScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 509580458764357527, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 591336372046041218, guid: 119ac4095499660408ddb9fc24636508, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -28563,6 +28619,22 @@ PrefabInstance:
     - target: {fileID: 2098697236364410378, guid: 119ac4095499660408ddb9fc24636508, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149979374976198402, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: testName
+      value: 
+      objectReference: {fileID: 5444744622883856885}
+    - target: {fileID: 2149979374976198402, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: userName
+      value: 
+      objectReference: {fileID: 2453815498821658616}
+    - target: {fileID: 2149979374976198402, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: testScore
+      value: 15/20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149979374976198402, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+      propertyPath: professorEmail
+      value: hmngvangence@gmail.com
       objectReference: {fileID: 0}
     - target: {fileID: 2155788270184964016, guid: 119ac4095499660408ddb9fc24636508, type: 3}
       propertyPath: m_Layer
@@ -29650,6 +29722,28 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3058789196960565177, guid: 119ac4095499660408ddb9fc24636508, type: 3}
   m_PrefabInstance: {fileID: 2905124102491665912}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3857139717567910650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2149979374976198402, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+  m_PrefabInstance: {fileID: 2905124102491665912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f280e8f79edf574c95ee799866894c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5444744622883856885 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7196343846543102989, guid: 119ac4095499660408ddb9fc24636508, type: 3}
+  m_PrefabInstance: {fileID: 2905124102491665912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1402222048689132897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4261710902671630489, guid: 119ac4095499660408ddb9fc24636508, type: 3}

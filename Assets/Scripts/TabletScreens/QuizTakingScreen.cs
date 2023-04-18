@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.Networking;
 
 public class QuizTakingScreen : QuizScreen
 {
@@ -20,6 +23,11 @@ public class QuizTakingScreen : QuizScreen
     [SerializeField] private TMPro.TMP_Text QuestionProgress;
 
     [SerializeField] private TMPro.TMP_Text AnswerProgress;
+
+    [SerializeField]private string professorEmail;
+    [SerializeField]private TMPro.TMP_Text testName;
+    [SerializeField]private TMPro.TMP_Text userName;
+    [SerializeField]private string testScore;
 
     private void Awake()
     {
@@ -145,4 +153,39 @@ public class QuizTakingScreen : QuizScreen
 
         assessmentHandler.SaveQuizForSubmission();
     }
+
+    #region QuizSubmission Functions
+    //Submit Quiz Score Functions
+    public void sendScore()
+    {
+        StartCoroutine(submitScore(professorEmail, testName.text, userName.text, testScore));
+    }
+    IEnumerator submitScore(string professorEmail, string testName, string userName, string testScore)
+    {
+
+        WWWForm form = new WWWForm();
+        form.AddField("professorEmailPost", professorEmail);
+        form.AddField("testNamePost", testName);
+        form.AddField("userNamePost", userName);
+        form.AddField("testScorePost", testScore);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("https://kvrconnect.azurewebsites.net/App/sendScore.php", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+                //LoginMenuTextboxMessage.text = (www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                //LoginMenuTextboxMessage.text = (www.downloadHandler.text);
+            }
+
+        }
+    }
+    #endregion
+
 }
