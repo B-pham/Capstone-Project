@@ -15,6 +15,7 @@ public class BuilderLoadFromAssetBundle : ALoadFromAssetBundle
         loadedObj.AddComponent<ParentTransformOnXRGrab>();
         loadedObj.AddComponent<RotateOnXRDrag>();
         loadedObj.GetComponent<RotateOnXRDrag>().enabled = false;
+        
 
         //ParentTransform Settings
         var parTransform = loadedObj.GetComponent<ParentTransformOnXRGrab>();

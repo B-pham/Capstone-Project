@@ -356,6 +356,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304071236536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +481,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304084463600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,6 +606,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304086673002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,6 +1441,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304258641134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,6 +1566,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304277860401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1721,6 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2022,6 +2028,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304364442303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2422,6 +2429,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304485880510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2556,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304490689542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,6 +2794,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304546732216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2975,6 +2985,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304571997579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3099,6 +3110,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304595375460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,6 +3626,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304638976638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3738,6 +3751,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304639932590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3862,6 +3876,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304641847759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3986,6 +4001,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304650588580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4110,6 +4126,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304657884191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4448,6 +4465,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304687541904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4919,6 +4937,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304705370426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5974,6 +5993,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618304938065861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7130,6 +7150,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305164631584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7673,6 +7694,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305251601152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7800,6 +7822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -8602,6 +8625,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305323165806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9021,6 +9045,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305374744838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9241,6 +9266,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305406400697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9416,6 +9442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 0}
   eventSystem: {fileID: 0}
+  XRRig: {fileID: 0}
+  LeftDrumstick: {fileID: 0}
+  RightDrumstick: {fileID: 0}
 --- !u!1 &3800618305429247098
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,6 +9749,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305468554216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9876,6 +9906,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305478410126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10084,6 +10115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -10603,6 +10635,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305585732706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10880,6 +10913,7 @@ GameObject:
   - component: {fileID: 3800618305628161183}
   - component: {fileID: 3800618305628161187}
   - component: {fileID: 3800618305628161180}
+  - component: {fileID: -3024478054191444647}
   m_Layer: 5
   m_Name: PredictionCanvas
   m_TagString: Untagged
@@ -10952,6 +10986,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 2
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305628161183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10983,6 +11018,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 3800618305628161181}
   eventSystem: {fileID: 0}
+  xrUIInputModule: {fileID: 0}
+  xrGraphicRaycaster: {fileID: 3800618305628161180}
+  inputSystemUIInputModule: {fileID: 0}
+  graphicRaycaster: {fileID: -3024478054191444647}
 --- !u!114 &3800618305628161180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11001,6 +11040,24 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 2147483647
+  m_RaycastTriggerInteraction: 1
+--- !u!114 &-3024478054191444647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800618305628161177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &3800618305647077580
 GameObject:
   m_ObjectHideFlags: 0
@@ -11091,6 +11148,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305647077586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12181,6 +12239,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305842884642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12713,6 +12772,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305911471273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12869,6 +12929,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618305965894138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13158,6 +13219,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618306013900432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13415,6 +13477,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 4
+  m_PresetInfoIsWorld: 0
 --- !u!114 &3800618306041747056
 MonoBehaviour:
   m_ObjectHideFlags: 0

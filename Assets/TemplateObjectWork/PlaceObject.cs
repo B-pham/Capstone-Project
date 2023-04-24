@@ -77,7 +77,7 @@ public class PlaceObject : MonoBehaviour
 
     public void placeInFrontOfPlayer()
     {
-        Vector3 placeLocation = (playerObject.transform.forward * 0.5f) + playerObject.transform.position;
+        Vector3 placeLocation = (playerObject.transform.forward * 1f) + playerObject.transform.position;
         Quaternion placeRotation = Quaternion.Euler(0, 0, 0);
 
         placeObject(placeLocation, placeRotation);

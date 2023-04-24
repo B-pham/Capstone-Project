@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3328089641
+CRC: 3821402755
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 60c6768b3aff3e4c9062372c18e8120a
+    Hash: b07ee4aaff907ad67b5e01412dd10405
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ecab261d60f6b915241487ea9aa883f1
+    Hash: 23cb0460db07c2d5b9d7f0bf5ac31780
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -27,20 +27,58 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 54
   Script: {instanceID: 0}
+- Class: 59
+  Script: {instanceID: 0}
 - Class: 64
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 37be690a8bb25194ab9aadc62fb0db23, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 287339d76fd9136459ccd22bb1c36b78, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 5411adffb779cd5499eb43fb2502f585, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 52abb6a4f39763c4da4d013ddc8badbd, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 39fa3d8997a24136984ca6e2c99902bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7661bcbef27f3f94da3402aeee60f237, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e65fbed0b0ac45a4b9baf7f54b16b541, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 957ef2ae946d8f54382e8536c2533c25, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 135
   Script: {instanceID: 0}
+- Class: 138
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/BoneWorks/Prefabs/RightKneeCap.prefab
+- Assets/BoneWorks/Prefabs/LeftHand.prefab
+- Assets/BoneWorks/Prefabs/AttachedSkeleton.prefab
+- Assets/BoneWorks/Prefabs/RightFibulaandTibia.prefab
+- Assets/BoneWorks/Prefabs/Skull.prefab
+- Assets/BoneWorks/Prefabs/RightHumerus.prefab
+- Assets/BoneWorks/Prefabs/LeftHumerus.prefab
+- Assets/BoneWorks/Prefabs/RightCollarBone.prefab
+- Assets/BoneWorks/Prefabs/RightRadiusandUlna.prefab
+- Assets/BoneWorks/Prefabs/Pelvis.prefab
+- Assets/BoneWorks/Prefabs/LeftRadiusandUlna_LOD0.prefab
+- Assets/BoneWorks/Prefabs/RightFemur.prefab
+- Assets/BoneWorks/Prefabs/RightFoot.prefab
+- Assets/BoneWorks/Prefabs/LeftShoulderBlade.prefab
+- Assets/BoneWorks/Prefabs/LeftCollarBone.prefab
+- Assets/BoneWorks/Prefabs/LeftKneeCap.prefab
+- Assets/BoneWorks/Prefabs/RightHand.prefab
+- Assets/BoneWorks/Prefabs/RightShoulderBlade.prefab
+- Assets/BoneWorks/Prefabs/LeftFemur.prefab
 - Assets/BoneWorks/Prefabs/Attachment_Sphere.prefab
+- Assets/BoneWorks/Prefabs/LeftFibulaandTibia.prefab
 - Assets/BoneWorks/Prefabs/BottomJaw.prefab
+- Assets/BoneWorks/Prefabs/LeftFoot.prefab
+- Assets/BoneWorks/Prefabs/Spine.prefab
+- Assets/BoneWorks/Prefabs/Tailbone.prefab
+- Assets/BoneWorks/Prefabs/Ribcage.prefab
 Dependencies: []
