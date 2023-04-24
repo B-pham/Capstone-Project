@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadingSceneName: LoadScreen
-  DefaultSceneName: Lobby
+  DefaultSceneName: LoginScreen
   loadMode: 0
 --- !u!4 &1345465538
 Transform:
