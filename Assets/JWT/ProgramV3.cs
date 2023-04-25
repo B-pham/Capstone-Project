@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,8 @@ public class ProgramV3 : MonoBehaviour
 
     // public TestData test = new TestData();
     // Start is called before the first frame update
-    void Start()
+
+    public void Encrypt(string Username, string Password)
     {
         //IDictionary<string, object> extraHeader = new Dictionary<string, object>();
 
@@ -32,21 +34,22 @@ public class ProgramV3 : MonoBehaviour
         var test = new TestData();//This is what will be encoded as the payload for the web token
 
         //Set of data in the object for the web token
-        test.testint = 5;
-        test.teststring = "Hello there!";
+        test.username = Username;
+        test.password = Password;
         var secret = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
 
         //This is where the token is encoded
         token = JsonWebToken.Encode(test, secret, JwtHashAlgorithm.HS256);
         //token = JsonWebToken.Encode(extraHeader, payload, secret, JwtHashAlgorithm.HS256);//Add additional headers to the web token
         Debug.Log(token);
+        File.WriteAllText(Application.dataPath + "/JsonWebToken.json", token);
     }
 
     public string TestEncrypt()//This is for unit testing. Should keep this as close to the actual code used for encryption
     {
         var test = new TestData();
-        test.testint = 5;
-        test.teststring = "Hello there!";
+        test.username = "test@test.gmail.com";
+        test.password = "Hello there!";
         var secret = "GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk";
         string Testtoken = JsonWebToken.Encode(test, secret, JwtHashAlgorithm.HS256);
         return Testtoken;
@@ -55,8 +58,8 @@ public class ProgramV3 : MonoBehaviour
     [System.Serializable]
     public class TestData
     {
-        public int testint;
-        public string teststring;
+        public string username;
+        public string password;
     }
 
 }

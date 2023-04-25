@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject passwordResetMenu;
     [SerializeField] private GameObject verificationMenu;
     [SerializeField] private GameObject userMenu;
+    [SerializeField] private GameObject Encrypt;
 
     private void Start(){
         setUpMainMenuButtons();
