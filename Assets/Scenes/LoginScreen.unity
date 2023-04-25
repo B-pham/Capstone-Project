@@ -4740,6 +4740,7 @@ MonoBehaviour:
   passwordResetMenu: {fileID: 641669669}
   verificationMenu: {fileID: 89919087}
   userMenu: {fileID: 295487900}
+  Encrypt: {fileID: 1408185300}
   mainMenuRegisterButton: {fileID: 1703069812}
   mainMenuLoginButton: {fileID: 1772155822}
   RegisterMenuRegisterButton: {fileID: 680513760}
@@ -41748,6 +41749,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1823001029836189636, guid: 27130ff9a6081424095c785af0e5bd61, type: 3}
   m_PrefabInstance: {fileID: 1407179879}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1408185300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408185302}
+  - component: {fileID: 1408185301}
+  m_Layer: 0
+  m_Name: Encrypt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1408185301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408185300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53fcf14bf8ad7840b0166152f2b98f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  token: 
+  secretKey: GQDstcKsx0NHjPOuXOYg5MbeJ1XT0uFiwDVvVBrk
+--- !u!4 &1408185302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408185300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2030077, y: 1.5118977, z: -0.678936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412976986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3800618305420514002, guid: 20984e22fdf05d340b526166ad8afd7e, type: 3}
@@ -44815,11 +44861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3021263073590466784, guid: 0d5c77197bc97294596826e8df8c1406, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22299998
+      value: -0.22299999
       objectReference: {fileID: 0}
     - target: {fileID: 3021263073590466784, guid: 0d5c77197bc97294596826e8df8c1406, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17800003
+      value: -0.17800005
       objectReference: {fileID: 0}
     - target: {fileID: 3021263073590466784, guid: 0d5c77197bc97294596826e8df8c1406, type: 3}
       propertyPath: m_LocalRotation.x
@@ -45617,6 +45663,7 @@ MonoBehaviour:
   passwordResetMenu: {fileID: 985064369}
   verificationMenu: {fileID: 52296014}
   userMenu: {fileID: 1710763809}
+  Encrypt: {fileID: 1408185300}
   mainMenuRegisterButton: {fileID: 187744138}
   mainMenuLoginButton: {fileID: 1395973640}
   RegisterMenuRegisterButton: {fileID: 809747915}
